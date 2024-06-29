@@ -6,19 +6,29 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
+    var urlString: String = Constants.randomImage
+    var resizingMode: ContentMode = .fill
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+     Rectangle()
+            .opacity(0.001)
+            .overlay(
+                WebImage(url: URL(string: urlString))
+                    .resizable()
+                    .indicator(.activity)
+                    .aspectRatio(contentMode: resizingMode)
+                    .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
+            )
+            .clipped()
     }
 }
 
 #Preview {
     ContentView()
+        .cornerRadius(30)
+        .padding(40)
+        .padding(.vertical, 60)
 }

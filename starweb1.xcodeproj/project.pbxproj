@@ -14,6 +14,20 @@
 		BFDC53922C2EEED9005B0FD2 /* starweb1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53912C2EEED9005B0FD2 /* starweb1Tests.swift */; };
 		BFDC539C2C2EEED9005B0FD2 /* starweb1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC539B2C2EEED9005B0FD2 /* starweb1UITests.swift */; };
 		BFDC539E2C2EEED9005B0FD2 /* starweb1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC539D2C2EEED9005B0FD2 /* starweb1UITestsLaunchTests.swift */; };
+		BFDC53AC2C2EF131005B0FD2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFDC53AB2C2EF131005B0FD2 /* SDWebImageSwiftUI */; };
+		BFDC53AF2C2EF18A005B0FD2 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53AE2C2EF18A005B0FD2 /* ImageLoaderView.swift */; };
+		BFDC53B12C2EF376005B0FD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53B02C2EF376005B0FD2 /* Constants.swift */; };
+		BFDC53B32C2F27E0005B0FD2 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53B22C2F27DF005B0FD2 /* DatabaseHelper.swift */; };
+		BFDC53B52C2F37EA005B0FD2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53B42C2F37EA005B0FD2 /* Product.swift */; };
+		BFDC53B72C2F3827005B0FD2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53B62C2F3827005B0FD2 /* User.swift */; };
+		BFDC53BA2C2F3FD6005B0FD2 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFDC53B92C2F3FD6005B0FD2 /* SwiftfulUI */; };
+		BFDC53BD2C2F4026005B0FD2 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = BFDC53BC2C2F4026005B0FD2 /* SwiftfulRouting */; };
+		BFE8E8912C30807700E9A7DC /* NavigationStackStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8902C30807700E9A7DC /* NavigationStackStarleet.swift */; };
+		BFE8E8952C308A0C00E9A7DC /* HomeStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8942C308A0C00E9A7DC /* HomeStarleet.swift */; };
+		BFE8E8972C308B9800E9A7DC /* CalendarStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8962C308B9800E9A7DC /* CalendarStarleet.swift */; };
+		BFE8E8992C308BB900E9A7DC /* LactateStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8982C308BB900E9A7DC /* LactateStarleet.swift */; };
+		BFE8E89B2C308C8F00E9A7DC /* ChatStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E89A2C308C8F00E9A7DC /* ChatStarleet.swift */; };
+		BFE8E89D2C308C9D00E9A7DC /* MetricStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E89C2C308C9D00E9A7DC /* MetricStarleet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +59,17 @@
 		BFDC53972C2EEED9005B0FD2 /* starweb1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = starweb1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDC539B2C2EEED9005B0FD2 /* starweb1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starweb1UITests.swift; sourceTree = "<group>"; };
 		BFDC539D2C2EEED9005B0FD2 /* starweb1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starweb1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BFDC53AE2C2EF18A005B0FD2 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		BFDC53B02C2EF376005B0FD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BFDC53B22C2F27DF005B0FD2 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		BFDC53B42C2F37EA005B0FD2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BFDC53B62C2F3827005B0FD2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BFE8E8902C30807700E9A7DC /* NavigationStackStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackStarleet.swift; sourceTree = "<group>"; };
+		BFE8E8942C308A0C00E9A7DC /* HomeStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStarleet.swift; sourceTree = "<group>"; };
+		BFE8E8962C308B9800E9A7DC /* CalendarStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStarleet.swift; sourceTree = "<group>"; };
+		BFE8E8982C308BB900E9A7DC /* LactateStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LactateStarleet.swift; sourceTree = "<group>"; };
+		BFE8E89A2C308C8F00E9A7DC /* ChatStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStarleet.swift; sourceTree = "<group>"; };
+		BFE8E89C2C308C9D00E9A7DC /* MetricStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricStarleet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDC53BA2C2F3FD6005B0FD2 /* SwiftfulUI in Frameworks */,
+				BFDC53BD2C2F4026005B0FD2 /* SwiftfulRouting in Frameworks */,
+				BFDC53AC2C2EF131005B0FD2 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +125,9 @@
 			children = (
 				BFDC537F2C2EEED6005B0FD2 /* starweb1App.swift */,
 				BFDC53812C2EEED6005B0FD2 /* ContentView.swift */,
+				BFE8E8932C30890200E9A7DC /* Components */,
+				BFE8E88D2C307D6600E9A7DC /* Core */,
+				BFDC53AD2C2EF156005B0FD2 /* Shared */,
 				BFDC53832C2EEED9005B0FD2 /* Assets.xcassets */,
 				BFDC53852C2EEED9005B0FD2 /* starweb1.entitlements */,
 				BFDC53862C2EEED9005B0FD2 /* Preview Content */,
@@ -129,6 +160,38 @@
 			path = starweb1UITests;
 			sourceTree = "<group>";
 		};
+		BFDC53AD2C2EF156005B0FD2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC53AE2C2EF18A005B0FD2 /* ImageLoaderView.swift */,
+				BFDC53B02C2EF376005B0FD2 /* Constants.swift */,
+				BFDC53B22C2F27DF005B0FD2 /* DatabaseHelper.swift */,
+				BFDC53B42C2F37EA005B0FD2 /* Product.swift */,
+				BFDC53B62C2F3827005B0FD2 /* User.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BFE8E88D2C307D6600E9A7DC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8902C30807700E9A7DC /* NavigationStackStarleet.swift */,
+				BFE8E8942C308A0C00E9A7DC /* HomeStarleet.swift */,
+				BFE8E8962C308B9800E9A7DC /* CalendarStarleet.swift */,
+				BFE8E8982C308BB900E9A7DC /* LactateStarleet.swift */,
+				BFE8E89A2C308C8F00E9A7DC /* ChatStarleet.swift */,
+				BFE8E89C2C308C9D00E9A7DC /* MetricStarleet.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BFE8E8932C30890200E9A7DC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +208,11 @@
 			dependencies = (
 			);
 			name = starweb1;
+			packageProductDependencies = (
+				BFDC53AB2C2EF131005B0FD2 /* SDWebImageSwiftUI */,
+				BFDC53B92C2F3FD6005B0FD2 /* SwiftfulUI */,
+				BFDC53BC2C2F4026005B0FD2 /* SwiftfulRouting */,
+			);
 			productName = starweb1;
 			productReference = BFDC537C2C2EEED6005B0FD2 /* starweb1.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +285,11 @@
 				Base,
 			);
 			mainGroup = BFDC53732C2EEED6005B0FD2;
+			packageReferences = (
+				BFDC53AA2C2EF131005B0FD2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				BFDC53B82C2F3FD6005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				BFDC53BB2C2F4026005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			productRefGroup = BFDC537D2C2EEED6005B0FD2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDC53AF2C2EF18A005B0FD2 /* ImageLoaderView.swift in Sources */,
+				BFE8E89B2C308C8F00E9A7DC /* ChatStarleet.swift in Sources */,
+				BFE8E89D2C308C9D00E9A7DC /* MetricStarleet.swift in Sources */,
+				BFE8E8972C308B9800E9A7DC /* CalendarStarleet.swift in Sources */,
+				BFDC53B32C2F27E0005B0FD2 /* DatabaseHelper.swift in Sources */,
+				BFE8E8912C30807700E9A7DC /* NavigationStackStarleet.swift in Sources */,
+				BFE8E8952C308A0C00E9A7DC /* HomeStarleet.swift in Sources */,
 				BFDC53822C2EEED6005B0FD2 /* ContentView.swift in Sources */,
 				BFDC53802C2EEED6005B0FD2 /* starweb1App.swift in Sources */,
+				BFDC53B12C2EF376005B0FD2 /* Constants.swift in Sources */,
+				BFDC53B52C2F37EA005B0FD2 /* Product.swift in Sources */,
+				BFE8E8992C308BB900E9A7DC /* LactateStarleet.swift in Sources */,
+				BFDC53B72C2F3827005B0FD2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +526,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nill.starweb1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,7 +565,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nill.starweb1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,6 +703,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFDC53AA2C2EF131005B0FD2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		BFDC53B82C2F3FD6005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.7;
+			};
+		};
+		BFDC53BB2C2F4026005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFDC53AB2C2EF131005B0FD2 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFDC53AA2C2EF131005B0FD2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		BFDC53B92C2F3FD6005B0FD2 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFDC53B82C2F3FD6005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		BFDC53BC2C2F4026005B0FD2 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFDC53BB2C2F4026005B0FD2 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDC53742C2EEED6005B0FD2 /* Project object */;
 }
