@@ -9,37 +9,43 @@ import SwiftUI
 
 struct NavigationStackStarleet: View {
     @State var selectedTab: Int = 0
+    @State private var searchText: String = ""
     var body: some View {
         NavigationStack{
+            
             TabView(selection: $selectedTab) {
                 HomeStarleet()
                     .tabItem {
-                        Label("Home", systemImage: "sum")
+                        Image(systemName: "sum")
                     }
                     .tag(0)
                 CalendarStarleet()
                     .tabItem {
-                        Label("Calendar", systemImage: "calendar")
+                        Image(systemName: "calendar")
                     }
                     .tag(1)
                 LactateStarleet()
                     .tabItem {
-                        Label("Lactate", systemImage: "dot.radiowaves.left.and.right")
+                        Image(systemName: "dot.radiowaves.left.and.right")
                     }
                     .tag(2)
                 ChatStarleet()
                     .tabItem {
-                        Label("Chat", systemImage: "person.2")
+                        Image(systemName: "person.2")
                     }
                     .tag(3)
                 MetricStarleet()
                     .tabItem {
-                        Label("Metric", systemImage: "chart.xyaxis.line")
+                        Image(systemName: "chart.xyaxis.line")
                     }
                     .tag(4)
             } .tint(.starleetMain)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
+                    ToolbarItem(placement: .principal) {
+                        SearchBar(searchText: $searchText)
+                            .frame(maxWidth: .infinity)
+                    }
                     ToolbarItem(placement: ToolbarItemPlacement.topBarLeading){
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                             Label("hello", systemImage: "person.fill")
@@ -56,7 +62,7 @@ struct NavigationStackStarleet: View {
                             
                         } else if selectedTab == 2 {
                             Button(action: {}, label: {
-                                Label("Send", systemImage: "arrow.down")
+                                Label("Send", systemImage: "cpu")
                             })
                             Button(action: {}, label: {
                                 Label("Send", systemImage: "plus")
@@ -76,7 +82,7 @@ struct NavigationStackStarleet: View {
                                 Label("Send", systemImage: "chart.dots.scatter")
                             })
                             Button(action: {}, label: {
-                                Label("Send", systemImage: "plus")
+                                Label("Send", systemImage: "list.bullet.clipboard")
                             })
                             
                         }
@@ -97,4 +103,25 @@ struct NavigationStackStarleet: View {
 
 #Preview {
     NavigationStackStarleet()
+}
+
+
+import SwiftUI
+
+struct SearchBar: View {
+    @Binding var searchText: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.starleetWhiteOne)
+            TextField("Search", text: $searchText)
+                .textFieldStyle(PlainTextFieldStyle())
+                .foregroundColor(.starleetWhiteOne)
+        }
+        .padding(2)
+        .background(.starleetDarkOne)
+        .cornerRadius(19)
+        .padding(.horizontal)
+    }
 }
