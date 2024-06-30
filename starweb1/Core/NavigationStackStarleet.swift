@@ -43,8 +43,7 @@ struct NavigationStackStarleet: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
                     ToolbarItem(placement: .principal) {
-                        SearchBar(searchText: $searchText)
-                            .frame(maxWidth: .infinity)
+                        SearchBarStarleet(searchText: $searchText)
                     }
                     ToolbarItem(placement: ToolbarItemPlacement.topBarLeading){
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -103,25 +102,4 @@ struct NavigationStackStarleet: View {
 
 #Preview {
     NavigationStackStarleet()
-}
-
-
-import SwiftUI
-
-struct SearchBar: View {
-    @Binding var searchText: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.starleetWhiteOne)
-            TextField("Search", text: $searchText)
-                .textFieldStyle(PlainTextFieldStyle())
-                .foregroundColor(.starleetWhiteOne)
-        }
-        .padding(2)
-        .background(.starleetDarkOne)
-        .cornerRadius(19)
-        .padding(.horizontal)
-    }
 }
