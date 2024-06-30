@@ -6,18 +6,24 @@
 //
 
 import SwiftUI
+import Charts
 
 struct HomeStarleet: View {
     var body: some View {
-        ZStack{
+        ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            Text("Home")
-                .foregroundStyle(.white)
+            TabView {
+                SessionChartStarleet()
+                WeeklyChartStarleet()
+                MonthlyChartStarleet()
+            }
+            .frame(height: 600)
+            .tabViewStyle(PageTabViewStyle())
+            .offset(y: -110)
         }
-        
-        
     }
 }
+
 
 #Preview {
     HomeStarleet()

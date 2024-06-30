@@ -39,7 +39,8 @@ struct NavigationStackStarleet: View {
                         Image(systemName: "chart.xyaxis.line")
                     }
                     .tag(4)
-            } .tint(.starleetMain)
+            }
+                .tint(.starleetMain)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
                     ToolbarItem(placement: .principal) {
@@ -72,7 +73,7 @@ struct NavigationStackStarleet: View {
                                 Label("Send", systemImage: "rectangle.3.group.bubble.fill")
                             })
                             Button(action: {}, label: {
-                                Label("Send", systemImage: "square.and.arrow.up")
+                                Label("Send", systemImage: "square.and.pencil")
                             })
                             
                         }
