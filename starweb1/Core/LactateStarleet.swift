@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct LactateStarleet: View {
-    var body: some View {
-        ZStack{
-            Color.starleetBlack.ignoresSafeArea()
-            Text("Lactate")
-                .foregroundStyle(.white)
-        }
-    }
-}
+    @State private var date = Date()
+       var body: some View {
+           ZStack{
+               Color.starleetBlack.ignoresSafeArea()
+               Text("Lactate")
+                   .foregroundStyle(.white)
+           }
+       }
+      
+   }
+
+
 
 #Preview {
     LactateStarleet()

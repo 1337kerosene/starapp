@@ -32,10 +32,6 @@ struct CalendarStarleet: View {
                 .fontWeight(.black)
                 LazyVGrid(columns: columns){
                     ForEach(days, id: \.self){ day in
-                        if day.monthInt != date.monthInt{
-                            Text("")
-                        } else {
-                            
                             Text(day.formatted(.dateTime.day()))
                             
                                 .fontWeight(.bold)
@@ -47,7 +43,7 @@ struct CalendarStarleet: View {
                                         : .starleetMain.opacity(0.3))
                                                    
                                 )
-                        }
+                        
                     }
                 }
             }
