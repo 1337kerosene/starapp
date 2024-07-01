@@ -12,14 +12,16 @@ struct HomeStarleet: View {
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            TabView {
-                SessionChartStarleet()
-                WeeklyChartStarleet()
-                MonthlyChartStarleet()
+            VStack{
+                TabView {
+                    SessionChartStarleet()
+                    WeeklyChartStarleet()
+                    MonthlyChartStarleet()
+                }
+                .frame(height: 600)
+                .tabViewStyle(PageTabViewStyle())
+                .offset(y: -110)
             }
-            .frame(height: 600)
-            .tabViewStyle(PageTabViewStyle())
-            .offset(y: -110)
         }
     }
 }

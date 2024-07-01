@@ -10,15 +10,19 @@ import Charts
 
 struct WeeklyChartStarleet: View {
     var body: some View {
-        Chart(data, id: \.category) { item in
-            BarMark(
-                x: .value("Category", item.category),
-                y: .value("Value", item.value)
-            )
+        ZStack{
+            Color.starleetBlack.ignoresSafeArea()
+            Chart(data, id: \.category) { item in
+                BarMark(
+                    x: .value("Category", item.category),
+                    y: .value("Value", item.value)
+                )
+            }
+            .chartXAxis(.hidden)
+            .chartYAxis(.hidden)
+            .frame(height: 500)
         }
-        .chartXAxis(.hidden)
-        .chartYAxis(.hidden)
-        .frame(height: 500)
+        
     }
 }
 

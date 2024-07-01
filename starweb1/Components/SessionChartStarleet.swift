@@ -11,6 +11,7 @@ import Charts
 struct SessionChartStarleet: View {
     var body: some View {
         ZStack{
+            Color.starleetBlack.ignoresSafeArea()
             Chart(data, id: \.category) { item in
                 LineMark(
                     x: .value("Category", item.category),
@@ -26,7 +27,8 @@ struct SessionChartStarleet: View {
             .chartYAxis(.hidden)
             .frame(height: 500)
             Text("2.8 mM")
-                .foregroundColor(.starleetMain)
+                .fontWeight(.black)
+                .foregroundStyle(.starleetWhiteTwo)
         }
         
         
