@@ -1,9 +1,4 @@
-//
-//  ChatStarleet.swift
-//  starweb1
-//
-//  Created by Peter Tran on 29/06/2024.
-//
+
 
 import SwiftUI
 
@@ -49,6 +44,8 @@ struct ChatStarleet: View {
                     
                 }
             }
+            .padding(.bottom, 16)
+            .padding(.top)
             
         }
     }

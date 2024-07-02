@@ -6,22 +6,13 @@
 //
 
 import SwiftUI
-import Charts
+
 
 struct HomeStarleet: View {
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            VStack{
-                TabView {
-                    SessionChartStarleet()
-                    WeeklyChartStarleet()
-                    MonthlyChartStarleet()
-                }
-                .frame(height: 600)
-                .tabViewStyle(PageTabViewStyle())
-                .offset(y: -110)
-            }
+           
         }
     }
 }
