@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF35B1612C34741700DEF284 /* ProfileStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35B1602C34741700DEF284 /* ProfileStarleet.swift */; };
 		BF44013F2C31974F00972DEF /* SessionChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44013E2C31974F00972DEF /* SessionChartStarleet.swift */; };
 		BF4401412C319BE300972DEF /* WeeklyChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4401402C319BE300972DEF /* WeeklyChartStarleet.swift */; };
 		BF4401432C319EFC00972DEF /* MonthlyChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4401422C319EFC00972DEF /* MonthlyChartStarleet.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF35B1602C34741700DEF284 /* ProfileStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStarleet.swift; sourceTree = "<group>"; };
 		BF44013E2C31974F00972DEF /* SessionChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionChartStarleet.swift; sourceTree = "<group>"; };
 		BF4401402C319BE300972DEF /* WeeklyChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartStarleet.swift; sourceTree = "<group>"; };
 		BF4401422C319EFC00972DEF /* MonthlyChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartStarleet.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				BF4401402C319BE300972DEF /* WeeklyChartStarleet.swift */,
 				BF4401422C319EFC00972DEF /* MonthlyChartStarleet.swift */,
 				BF9FD10B2C32A38D00A64DFC /* Date+Extension.swift */,
+				BF35B1602C34741700DEF284 /* ProfileStarleet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				BFE8E89D2C308C9D00E9A7DC /* MetricStarleet.swift in Sources */,
 				BFE8E8972C308B9800E9A7DC /* CalendarStarleet.swift in Sources */,
 				BFDC53B32C2F27E0005B0FD2 /* DatabaseHelper.swift in Sources */,
+				BF35B1612C34741700DEF284 /* ProfileStarleet.swift in Sources */,
 				BFE8E8912C30807700E9A7DC /* NavigationStackStarleet.swift in Sources */,
 				BFE8E8952C308A0C00E9A7DC /* HomeStarleet.swift in Sources */,
 				BF4401432C319EFC00972DEF /* MonthlyChartStarleet.swift in Sources */,
