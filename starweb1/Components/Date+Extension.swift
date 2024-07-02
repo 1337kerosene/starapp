@@ -1,51 +1,50 @@
 import Foundation
 
 extension Date {
-    static var capitalizedFirstLettersOfWeekdays: [String] {
-        Calendar.current.shortWeekdaySymbols.map { $0.prefix(1).capitalized }
+    static var calendar: Calendar {
+        var calendar = Calendar.current
+        calendar.firstWeekday = 2 // Start week on Monday
+        return calendar
     }
 
-    static var fullMonthNames: [String] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
-        return (1...12).map {
-            dateFormatter.string(from: Calendar.current.date(from: DateComponents(year: 2000, month: $0))!)
-        }
+    var startOfYear: Date {
+        let components = Date.calendar.dateComponents([.year], from: self)
+        return Date.calendar.date(from: components)!
     }
 
-    var startOfMonth: Date {
-        Calendar.current.dateInterval(of: .month, for: self)!.start
+    var endOfYear: Date {
+        let components = DateComponents(year: 1, day: -1)
+        return Date.calendar.date(byAdding: components, to: startOfYear)!
     }
 
-    var endOfMonth: Date {
-        Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.dateInterval(of: .month, for: self)!.end)!
-    }
-
-    var startOfPreviousMonth: Date {
-        Calendar.current.date(byAdding: .month, value: -1, to: startOfMonth)!
-    }
-
-    var numberOfDaysInMonth: Int {
-        Calendar.current.range(of: .day, in: .month, for: self)!.count
-    }
-
-    var sundayBeforeStart: Date {
-        Calendar.current.date(byAdding: .day, value: -Calendar.current.component(.weekday, from: startOfMonth) + 1, to: startOfMonth)!
-    }
-
-    var calendarDisplayDays: [Date] {
+    var daysInYear: [Date] {
         var days: [Date] = []
-        var current = sundayBeforeStart
+        var current = startOfYear
 
-        while current <= endOfMonth || days.count % 7 != 0 {
+        // Add leading days to align the first day of the year
+        let firstDayOfWeek = Date.calendar.component(.weekday, from: startOfYear)
+        let leadingDays = (firstDayOfWeek - Date.calendar.firstWeekday + 7) % 7
+        for _ in 0..<leadingDays {
+            current = Date.calendar.date(byAdding: .day, value: -1, to: current)!
+            days.insert(current, at: 0)
+        }
+
+        // Reset current to the start of the year
+        current = startOfYear
+        while current <= endOfYear {
             days.append(current)
-            current = Calendar.current.date(byAdding: .day, value: 1, to: current)!
+            current = Date.calendar.date(byAdding: .day, value: 1, to: current)!
+        }
+
+        // Add trailing days to complete the last week
+        let trailingDays = (7 - days.count % 7) % 7
+        if trailingDays < 7 {
+            for _ in 0..<trailingDays {
+                days.append(current)
+                current = Date.calendar.date(byAdding: .day, value: 1, to: current)!
+            }
         }
 
         return days
-    }
-
-    var startOfDay: Date {
-        Calendar.current.startOfDay(for: self)
     }
 }
