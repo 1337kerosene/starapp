@@ -16,26 +16,23 @@ struct LactateStarleet: View {
                                     .foregroundStyle(.starleetMain)
                                 VStack(alignment:.leading){
                                     HStack{
-                                        Image(systemName: "stopwatch.fill")
                                         Text("10 min")
-                                            .font(.system(size:18, weight: .bold))
-                                            .foregroundStyle(.starleetWhiteOne)
+                                            .font(.system(size:24, weight: .bold))
+                                            .foregroundStyle(.starleetWhiteTwo)
                                     }
                                     HStack{
-                                        Image(systemName: "heart.fill")
                                         Text("150")
+                                        Image(systemName: "heart.fill")
                                         Text(" | ")
-                                        Image(systemName: "thermometer.high")
                                         Text("38°C")
-                                            .font(.system(size:16))
-                                            .foregroundStyle(.starleetWhiteTwo)
-                                        
                                     }
+                                    .font(.system(size:14))
+                                    .foregroundStyle(.gray)
                                 }
                                 .foregroundStyle(.starleetWhiteOne)
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .leading)
                                 Text("10 mM")
-                                    .font(.system(size: 24, weight: .bold))
+                                    .font(.system(size: 32, weight: .bold))
                                     .foregroundStyle(.starleetMain)
                             }
                             Divider()

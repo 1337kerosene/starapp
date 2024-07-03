@@ -12,7 +12,6 @@ struct NavigationStackStarleet: View {
     @State private var searchText: String = ""
     var body: some View {
         NavigationStack{
-            
             TabView(selection: $selectedTab) {
                 HomeStarleet()
                     .tabItem {
@@ -47,9 +46,9 @@ struct NavigationStackStarleet: View {
                         SearchBarStarleet(searchText: $searchText)
                     }
                     ToolbarItem(placement: ToolbarItemPlacement.topBarLeading){
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Label("hello", systemImage: "person.fill")
-                        })
+                        NavigationLink(destination: ProfileStarleet()) {
+                            Label("Profile", systemImage: "person.fill")
+                        }
                     }
                     ToolbarItemGroup(placement: ToolbarItemPlacement.topBarTrailing){
                         if selectedTab == 1 {
@@ -62,7 +61,7 @@ struct NavigationStackStarleet: View {
                             
                         } else if selectedTab == 2 {
                             Button(action: {}, label: {
-                                Label("Send", systemImage: "cpu")
+                                Label("Send", systemImage: "gear")
                             })
                             Button(action: {}, label: {
                                 Label("Send", systemImage: "plus")

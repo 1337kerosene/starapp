@@ -12,7 +12,7 @@ struct HomeStarleet: View {
     let columns = Array(repeating: GridItem(.flexible(minimum: 20)), count: 2)
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color.starleetBlack.ignoresSafeArea()
             ScrollView{
                 HStack{
                    Circle()

@@ -12,27 +12,23 @@ struct ChatStarleet: View {
                         VStack{
                             HStack(spacing: 16){
                                 Image(systemName: "person.fill")
-                                    .font(.system(size:32))
+                                    .font(.system(size:34))
                                     .padding(8)
                                     .foregroundStyle(.starleetMain)
-                                    .overlay(RoundedRectangle(
-                                        cornerRadius: 44)
-                                        .stroke(.starleetWhiteTwo, lineWidth: 1)
-                                    )
                                 VStack(alignment:.leading){
                                     Text("Satoshi Nakamoto")
-                                        .font(.system(size:16, weight: .bold))
+                                        .font(.system(size:18, weight: .bold))
                                         .foregroundStyle(.starleetWhiteOne)
                                     Text("You have to buy BITCOIN for access")
                                         .font(.system(size:14))
-                                        .foregroundStyle(.starleetWhiteTwo)
+                                        .foregroundStyle(.gray)
                                     
                                 }
                                 .foregroundStyle(.starleetWhiteOne)
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .leading)
                                 Text("22d")
                                     .font(.system(size:14, weight: .semibold))
-                                    .foregroundStyle(.starleetMain)
+                                    .foregroundStyle(.gray)
                             }
                             Divider()
                                 .padding(.vertical, 8)
