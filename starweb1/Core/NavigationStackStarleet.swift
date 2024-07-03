@@ -10,6 +10,7 @@ import SwiftUI
 struct NavigationStackStarleet: View {
     @State var selectedTab: Int = 0
     @State private var searchText: String = ""
+    @State private var inputText: String = ""
     var body: some View {
         NavigationStack{
             TabView(selection: $selectedTab) {
@@ -39,67 +40,214 @@ struct NavigationStackStarleet: View {
                     }
                     .tag(4)
             }
-                .tint(.starleetMain)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar{
-                    ToolbarItem(placement: .principal) {
-                        SearchBarStarleet(searchText: $searchText)
+            .tint(.starleetMain)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .principal) {
+                    SearchBarStarleet(searchText: $searchText)
+                }
+                ToolbarItem(placement: ToolbarItemPlacement.topBarLeading){
+                    NavigationLink(destination: ProfileStarleet()) {
+                        Label("Profile", systemImage: "person.fill")
                     }
-                    ToolbarItem(placement: ToolbarItemPlacement.topBarLeading){
-                        NavigationLink(destination: ProfileStarleet()) {
-                            Label("Profile", systemImage: "person.fill")
-                        }
-                    }
-                    ToolbarItemGroup(placement: ToolbarItemPlacement.topBarTrailing){
-                        if selectedTab == 1 {
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "calendar")
-                            })
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "plus")
-                            })
-                            
-                        } else if selectedTab == 2 {
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "gear")
-                            })
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "plus")
-                            })
-                            
-                        } else if selectedTab == 3 {
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "rectangle.3.group.bubble.fill")
-                            })
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "square.and.pencil")
-                            })
-                            
-                        }
-                        else if selectedTab == 4 {
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "chart.dots.scatter")
-                            })
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "list.bullet.clipboard")
-                            })
-                            
-                        }
-                        else {
-                            NavigationLink(destination: SubscriptionStarleet()) {
-                                Label("Subscription", systemImage: "cpu")
+                }
+                ToolbarItemGroup(placement: ToolbarItemPlacement.topBarTrailing){
+                    if selectedTab == 1 {
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
                             }
-                            
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "bell")
-                            })
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "calendar")
+                        }
+                        
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "plus")
+                        }
+                        
+                    } else if selectedTab == 2 {
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "gear")
+                        }
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "plus")
+                        }
+                        
+                    } else if selectedTab == 3 {
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "rectangle.3.group.bubble.fill")
+                        }
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("To: ")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "square.and.pencil")
+                        }
+                        
+                    }
+                    else if selectedTab == 4 {
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "chart.dots.scatter")
+                        }
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "list.bullet.clipboard")
+                        }
+                        
+                    }
+                    else {
+                        NavigationLink(destination: SubscriptionStarleet()) {
+                            Label("Subscription", systemImage: "cpu")
+                        }
+                        
+                        Menu {
+                            Button(action: {
+                                // Action 1
+                            }) {
+                                Text("New message")
+                            }
+                            Button(action: {
+                                // Action 2
+                            }) {
+                                Text("New training program")
+                            }
+                            Button(action: {
+                                // Action 3
+                            }) {
+                                Text("Option 3")
+                            }
+                        } label: {
+                            Label("Notifications", systemImage: "bell")
                         }
                     }
                 }
-                .tint(.white)
+            }
+            .tint(.white)
         }
     }
 }
+
+
 
 #Preview {
     NavigationStackStarleet()

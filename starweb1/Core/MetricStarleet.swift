@@ -9,6 +9,7 @@ struct MetricStarleet: View {
                 TabView {
                     SessionChartStarleet()
                     WeeklyChartStarleet()
+                    PieChartStarleet()
                     MonthlyChartStarleet()
                 }
                 .frame(height: 600)
