@@ -86,9 +86,10 @@ struct NavigationStackStarleet: View {
                             
                         }
                         else {
-                            Button(action: {}, label: {
-                                Label("Send", systemImage: "cpu")
-                            })
+                            NavigationLink(destination: SubscriptionStarleet()) {
+                                Label("Subscription", systemImage: "cpu")
+                            }
+                            
                             Button(action: {}, label: {
                                 Label("Send", systemImage: "bell")
                             })
