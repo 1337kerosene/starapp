@@ -57,17 +57,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Today")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Choose Date/Time")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Submit")
                             }
                         } label: {
                             Label("Notifications", systemImage: "calendar")
@@ -77,17 +77,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Date/Time")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Values")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Submit")
                             }
                         } label: {
                             Label("Notifications", systemImage: "plus")
@@ -98,17 +98,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Signal Health")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Device Health")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Device Number")
                             }
                         } label: {
                             Label("Notifications", systemImage: "gear")
@@ -117,17 +117,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Time")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Value")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Submit")
                             }
                         } label: {
                             Label("Notifications", systemImage: "plus")
@@ -138,17 +138,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Group 1")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Group 2")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Group 3")
                             }
                         } label: {
                             Label("Notifications", systemImage: "rectangle.3.group.bubble.fill")
@@ -162,12 +162,12 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Textfield")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Send")
                             }
                         } label: {
                             Label("Notifications", systemImage: "square.and.pencil")
@@ -179,17 +179,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("X Values")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Y Values")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Reset")
                             }
                         } label: {
                             Label("Notifications", systemImage: "chart.dots.scatter")
@@ -198,17 +198,17 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 1
                             }) {
-                                Text("New message")
+                                Text("Report")
                             }
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("New training program")
+                                Text("Advanced report")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("Download")
                             }
                         } label: {
                             Label("Notifications", systemImage: "list.bullet.clipboard")
@@ -234,7 +234,7 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Option 3")
+                                Text("New message")
                             }
                         } label: {
                             Label("Notifications", systemImage: "bell")
