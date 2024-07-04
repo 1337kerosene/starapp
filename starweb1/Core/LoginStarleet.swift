@@ -9,11 +9,12 @@ import SwiftUI
 
 struct LoginStarleet: View {
     @State private var trigger: Bool = false
+    @State private var text = "Hello World!"
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
             VStack(alignment: .leading, spacing:12) {
-                HackerTextView(text: trigger ? "Hello" : "Starleet ApS",
+                HackerTextView(text: text,
                                trigger: trigger,
                                transition: .interpolate,
                                speed: 0.06
@@ -22,13 +23,26 @@ struct LoginStarleet: View {
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 .foregroundStyle(.starleetWhiteTwo)
                 
-                Button(action: {trigger.toggle()}, label: {
+                Button(action: {
+                    if text == "Hello World!"{
+                        text = "This is starleet"
+                    } else if text == "This is starleet"{
+                        text = "Made by the love of athletes"
+                    } else {
+                        text = "Hello World!"
+                    }
+                    trigger.toggle()
+                }, label: {
                     Text("Trigger")
                         .fontWeight(.semibold)
                         .padding(.horizontal, 15)
                         .padding(.vertical, 2)
                         
                 })
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.capsule)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .padding(.top, 30)
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             .padding(15)

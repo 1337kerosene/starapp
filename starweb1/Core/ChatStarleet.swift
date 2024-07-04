@@ -22,7 +22,6 @@ struct ChatStarleet: View {
                                     Text("You have to buy BITCOIN for access")
                                         .font(.system(size:14))
                                         .foregroundStyle(.gray)
-                                    
                                 }
                                 .foregroundStyle(.starleetWhiteOne)
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .leading)
