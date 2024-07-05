@@ -17,84 +17,72 @@ struct NewTraining: View {
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            NavigationView {
-                Form {
-                    DatePicker("", selection: $selectedDate, displayedComponents: .date)
-                        .colorScheme(.dark)
-                        .listRowBackground(Color.starleetBlack)
-                    
-                    // Distance in meters
-                    ZStack(alignment: .leading) {
-                        if distanceInMeters.isEmpty {
-                            Text("Distance (m)")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $distanceInMeters)
-                            .foregroundColor(.white)
-                            .keyboardType(.numberPad)
+            VStack {
+                ZStack(alignment: .leading) {
+                    if distanceInMeters.isEmpty {
+                        Text("Distance (m)")
+                            .foregroundColor(.gray)
                     }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
-                    
-                    // Duration
-                    ZStack(alignment: .leading) {
-                        if duration.isEmpty {
-                            Text("Duration")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $duration)
-                            .foregroundColor(.white)
-                            .keyboardType(.numberPad)
-                    }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
-                    
-                    // Lactate
-                    ZStack(alignment: .leading) {
-                        if lactateLevel.isEmpty {
-                            Text("Lactate")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $lactateLevel)
-                            .foregroundColor(.white)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
+                    TextField("", text: $distanceInMeters)
+                        .foregroundColor(.white)
+                        .keyboardType(.numberPad)
                 }
-                .navigationBarItems(trailing: Button("Save") {
-                    // Dismiss the form
-                    showingForm = false
-                })
+                .padding()
                 .background(Color.starleetBlack)
-                .scrollContentBackground(.hidden)
-                .accentColor(.starleetMain)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
                 
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("New Session")
-                            .foregroundColor(.starleetWhiteOne)
-                            .font(.headline)
+                // Duration
+                ZStack(alignment: .leading) {
+                    if duration.isEmpty {
+                        Text("Duration")
+                            .foregroundColor(.gray)
                     }
+                    TextField("", text: $duration)
+                        .foregroundColor(.white)
+                        .keyboardType(.numberPad)
                 }
+                .padding()
+                .background(Color.starleetBlack)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                
+                // Lactate
+                ZStack(alignment: .leading) {
+                    if lactateLevel.isEmpty {
+                        Text("Lactate")
+                            .foregroundColor(.gray)
+                    }
+                    TextField("", text: $lactateLevel)
+                        .foregroundColor(.white)
+                        .keyboardType(.decimalPad)
+                }
+                .padding()
+                .background(Color.starleetBlack)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                Button(action: {
+                    // Save the form
+                    showingForm = false
+                }) {
+                    Text("Save")
+                        .foregroundColor(.starleetMain)
+                }
+                .padding()
+                
             }
-            .fontWeight(.bold)
-            .presentationDetents([.medium])
+            .background(Color.starleetBlack)
+            .padding()
+            .presentationDetents([.fraction(0.40)])
         }
     }
 }

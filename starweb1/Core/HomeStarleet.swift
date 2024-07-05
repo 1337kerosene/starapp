@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-
 struct HomeStarleet: View {
-    let columns = Array(repeating: GridItem(.flexible(minimum: 20)), count: 2)
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
@@ -23,12 +21,18 @@ struct HomeStarleet: View {
                          .foregroundStyle(.green)
                 }
                 .padding()
-                LazyVGrid(columns: columns) {
-                    ForEach(MockData.colors.indices, id: \.self) { index in
+                LazyVStack {
+                   
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(MockData.colors[index])
+                        .fill(.red)
                             .frame(height: 150)
-                    }
+                    RoundedRectangle(cornerRadius: 10)
+                    .fill(.green)
+                        .frame(height: 150)
+                    RoundedRectangle(cornerRadius: 10)
+                    .fill(.blue)
+                        .frame(height: 150)
+                    
                 }
                 .padding()
                 
@@ -38,27 +42,6 @@ struct HomeStarleet: View {
         }
     }
 }
-
-struct MockData {
-    static var colors: [Color] {
-        var array: [Color] = []
-        for _ in 0..<30 {
-            array.append(Color.random)
-        }
-        return array
-    }
-}
-
-extension Color {
-    static var random: Color {
-        return Color(
-            red: Double.random(in: 0...1),
-            green: Double.random(in: 0...1),
-            blue: Double.random(in: 0...1)
-        )
-    }
-}
-
 
 
 #Preview {

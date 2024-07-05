@@ -15,60 +15,63 @@ struct NewMessage: View {
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            NavigationView {
-                Form {
-                    ZStack(alignment: .leading) {
-                        if receiver.isEmpty {
-                            Text("To:")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $receiver)
-                            .foregroundColor(.white)
-                            .keyboardType(.numberPad)
+            VStack {
+                ZStack(alignment: .leading) {
+                    if receiver.isEmpty {
+                        Text("To:")
+                            .foregroundColor(.gray)
                     }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
-                    
-                    
-                    ZStack(alignment: .leading) {
-                        if message.isEmpty {
-                            Text("Message")
-                                .foregroundColor(.gray)
-                                .padding(.leading, 4)
-                                .padding(.bottom, 120)
-                        }
-                        TextEditor(text: $message)
-                            .foregroundColor(.white)
-                            .background(Color.clear)
-                            .frame(height: 150) // Adjust the height as needed
-                    }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
+                    TextField("", text: $receiver)
+                        .foregroundColor(.white)
+                        .keyboardType(.numberPad)
                 }
-                .navigationBarItems(trailing: Button("Send") {
-                    // Dismiss the form
+                .padding()
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                                
+                ZStack(alignment: .leading) {
+                    if message.isEmpty {
+                        Text("Message")
+                            .foregroundColor(.gray)
+                            .padding(.leading, 4)
+                            .padding(.bottom, 120)
+                    }
+                    TextEditor(text: $message)
+                        .foregroundColor(.white)
+                        .background(Color.clear)
+                        .frame(height: 150) // Adjust the height as needed
+                }
+                .padding()
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                
+                Button(action: {
+                    // Save the form
                     showingForm = false
-                })
-                .background(Color.starleetBlack)
-                .scrollContentBackground(.hidden)
-                .accentColor(.starleetMain)
-                .fontWeight(.bold)
-            }
-            .presentationDetents([.medium])
-        }
-        .onAppear {
-                    showingSheet = true
+                }) {
+                    Text("Send")
+                        .foregroundColor(.starleetMain)
                 }
+                .padding()
+            }
+            .background(Color.starleetBlack)
+            .scrollContentBackground(.hidden)
+            .accentColor(.starleetMain)
+            .fontWeight(.bold)
+            .presentationDetents([.medium])
+            .onAppear {
+                showingSheet = true
+            }
+            
+            
+        }
+        
     }
 }
 

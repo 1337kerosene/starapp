@@ -39,12 +39,12 @@ struct SessionChartStarleet: View {
     SessionChartStarleet()
 }
 
-struct ValuePerCategory {
+struct ValuePerCategory1 {
     var category: String
     var value: Double
 }
 
-let data: [ValuePerCategory] = [
+let data: [ValuePerCategory1] = [
     .init(category: "5:00", value: 1),
     .init(category: "4:45", value: 1.5),
     .init(category: "4:30", value: 1.7),

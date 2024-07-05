@@ -10,84 +10,84 @@ struct CalendarButton: View {
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
-            NavigationView {
-                Form {
-                    DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
-                        .colorScheme(.dark)
-                        .listRowBackground(Color.starleetBlack)
-                    
-                    // Distance in meters
-                    ZStack(alignment: .leading) {
-                        if distanceInMeters.isEmpty {
-                            Text("Distance (m)")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $distanceInMeters)
-                            .foregroundColor(.white)
-                            .keyboardType(.numberPad)
-                    }
+            VStack {
+                DatePicker("", selection: $selectedDate, displayedComponents: .date)
+                    .colorScheme(.dark)
                     .padding()
+                    .background(Color.starleetBlack)
                     .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
-                    
-                    // Duration
-                    ZStack(alignment: .leading) {
-                        if duration.isEmpty {
-                            Text("Duration")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $duration)
-                            .foregroundColor(.white)
-                            .keyboardType(.numberPad)
+      
+                // Distance in meters
+                ZStack(alignment: .leading) {
+                    if distanceInMeters.isEmpty {
+                        Text("Distance (m)")
+                            .foregroundColor(.gray)
+                            .padding(.leading, 4)
                     }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
-                    
-                    // Lactate
-                    ZStack(alignment: .leading) {
-                        if lactateLevel.isEmpty {
-                            Text("Lactate")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("", text: $lactateLevel)
-                            .foregroundColor(.white)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .listRowBackground(Color.starleetBlack)
+                    TextField("", text: $distanceInMeters)
+                        .foregroundColor(.white)
+                        .keyboardType(.numberPad)
+                        .padding(.leading, 4)
                 }
-                .navigationBarItems(trailing: Button("Save") {
-                    // Dismiss the form
-                    showingForm = false
-                })
+                .padding()
                 .background(Color.starleetBlack)
-                .scrollContentBackground(.hidden)
-                .accentColor(.starleetMain)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
                 
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Enter Details")
-                            .foregroundColor(.starleetWhiteOne)
-                            .font(.headline)
+                // Duration
+                ZStack(alignment: .leading) {
+                    if duration.isEmpty {
+                        Text("Duration")
+                            .foregroundColor(.gray)
+                            .padding(.leading, 4)
                     }
+                    TextField("", text: $duration)
+                        .foregroundColor(.white)
+                        .keyboardType(.numberPad)
+                        .padding(.leading, 4)
                 }
+                .padding()
+                .background(Color.starleetBlack)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                
+                // Lactate
+                ZStack(alignment: .leading) {
+                    if lactateLevel.isEmpty {
+                        Text("Lactate")
+                            .foregroundColor(.gray)
+                            .padding(.leading, 4)
+                    }
+                    TextField("", text: $lactateLevel)
+                        .foregroundColor(.white)
+                        .keyboardType(.decimalPad)
+                        .padding(.leading, 4)
+                }
+                .padding()
+                .background(Color.starleetBlack)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                Button(action: {
+                    // Save the form
+                    showingForm = false
+                }) {
+                    Text("Save")
+                        .foregroundColor(.starleetMain)
+                }
+                .padding()
             }
-            .fontWeight(.bold)
-            .presentationDetents([.medium])
+            .background(Color.starleetBlack)
+            .padding()
+            .presentationDetents([.fraction(0.45)])
         }
     }
 }

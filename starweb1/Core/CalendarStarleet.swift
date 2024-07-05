@@ -16,7 +16,7 @@ struct CalendarStarleet: View {
                 )
                 .padding(.bottom, 16)
                 .onChange(of: date){
-                    updateDates()
+                    days = date.daysInYear
                 }
                 
                 HStack {
@@ -48,13 +48,10 @@ struct CalendarStarleet: View {
             .padding()
             .foregroundStyle(.starleetWhiteTwo)
             .onAppear{
-                updateDates()
+                days = date.daysInYear
             }
         }
     }
-    private func updateDates() {
-            days = date.daysInYear
-        }
 }
 
 #Preview {
