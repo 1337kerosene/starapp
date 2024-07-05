@@ -26,7 +26,7 @@ struct PieChartStarleet: View {
                 angularInset: 2
               )
               .cornerRadius(5)
-              .foregroundStyle(by: .value("Category", item.category))
+   
             }
             .scaledToFit()
             .chartLegend(.hidden)
