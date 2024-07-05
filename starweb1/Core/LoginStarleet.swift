@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginStarleet: View {
     @State private var trigger: Bool = false
-    @State private var text = "Hello World!"
+    @State private var text = "Welcome!"
     var body: some View {
         ZStack {
             Color.starleetBlack.ignoresSafeArea()
@@ -24,12 +24,12 @@ struct LoginStarleet: View {
                 .foregroundStyle(.starleetWhiteTwo)
                 
                 Button(action: {
-                    if text == "Hello World!"{
+                    if text == "Welcome!"{
                         text = "This is starleet"
                     } else if text == "This is starleet"{
-                        text = "Made by the love of athletes"
+                        text = "Time to master lactate"
                     } else {
-                        text = "Hello World!"
+                        text = "Welcome!"
                     }
                     trigger.toggle()
                 }, label: {

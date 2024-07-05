@@ -11,6 +11,7 @@ struct NavigationStackStarleet: View {
     @State var selectedTab: Int = 0
     @State private var searchText: String = ""
     @State private var inputText: String = ""
+    @State private var showingSheet = false
     var body: some View {
         NavigationStack{
             TabView(selection: $selectedTab) {
@@ -62,37 +63,24 @@ struct NavigationStackStarleet: View {
                             Button(action: {
                                 // Action 2
                             }) {
-                                Text("Choose Date/Time")
+                                Text("Month")
                             }
                             Button(action: {
                                 // Action 3
                             }) {
-                                Text("Submit")
+                                Text("Date")
                             }
                         } label: {
                             Label("Notifications", systemImage: "calendar")
                         }
-                        
-                        Menu {
-                            Button(action: {
-                                // Action 1
-                            }) {
-                                Text("Date/Time")
-                            }
-                            Button(action: {
-                                // Action 2
-                            }) {
-                                Text("Values")
-                            }
-                            Button(action: {
-                                // Action 3
-                            }) {
-                                Text("Submit")
-                            }
-                        } label: {
-                            Label("Notifications", systemImage: "plus")
+                        Button(action: {
+                            showingSheet.toggle()
+                        }) {
+                            Label("Calendar", systemImage: "plus")
                         }
-                        
+                        .sheet(isPresented: $showingSheet) {
+                            CalendarButton()
+                        }
                     } else if selectedTab == 2 {
                         Menu {
                             Button(action: {
@@ -113,26 +101,14 @@ struct NavigationStackStarleet: View {
                         } label: {
                             Label("Notifications", systemImage: "gear")
                         }
-                        Menu {
-                            Button(action: {
-                                // Action 1
-                            }) {
-                                Text("Time")
-                            }
-                            Button(action: {
-                                // Action 2
-                            }) {
-                                Text("Value")
-                            }
-                            Button(action: {
-                                // Action 3
-                            }) {
-                                Text("Submit")
-                            }
-                        } label: {
-                            Label("Notifications", systemImage: "plus")
+                        Button(action: {
+                            showingSheet.toggle()
+                        }) {
+                            Label("NewTraining", systemImage: "plus")
                         }
-                        
+                        .sheet(isPresented: $showingSheet) {
+                            NewTraining()
+                        }
                     } else if selectedTab == 3 {
                         Menu {
                             Button(action: {
@@ -153,46 +129,25 @@ struct NavigationStackStarleet: View {
                         } label: {
                             Label("Notifications", systemImage: "rectangle.3.group.bubble.fill")
                         }
-                        Menu {
-                            Button(action: {
-                                // Action 1
-                            }) {
-                                Text("To: ")
-                            }
-                            Button(action: {
-                                // Action 2
-                            }) {
-                                Text("Textfield")
-                            }
-                            Button(action: {
-                                // Action 3
-                            }) {
-                                Text("Send")
-                            }
-                        } label: {
-                            Label("Notifications", systemImage: "square.and.pencil")
-                        }
                         
+                        Button(action: {
+                            showingSheet.toggle()
+                        }) {
+                            Label("Message", systemImage: "square.and.pencil")
+                        }
+                        .sheet(isPresented: $showingSheet) {
+                            NewMessage()
+                        }
                     }
                     else if selectedTab == 4 {
-                        Menu {
-                            Button(action: {
-                                // Action 1
-                            }) {
-                                Text("X Values")
-                            }
-                            Button(action: {
-                                // Action 2
-                            }) {
-                                Text("Y Values")
-                            }
-                            Button(action: {
-                                // Action 3
-                            }) {
-                                Text("Reset")
-                            }
-                        } label: {
-                            Label("Notifications", systemImage: "chart.dots.scatter")
+                        
+                        Button(action: {
+                            showingSheet.toggle()
+                        }) {
+                            Label("Plotvalues", systemImage: "chart.dots.scatter")
+                        }
+                        .sheet(isPresented: $showingSheet) {
+                            PlotValues()
                         }
                         Menu {
                             Button(action: {

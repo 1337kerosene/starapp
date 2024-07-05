@@ -13,10 +13,14 @@
 		BF4401412C319BE300972DEF /* WeeklyChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4401402C319BE300972DEF /* WeeklyChartStarleet.swift */; };
 		BF4401432C319EFC00972DEF /* MonthlyChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4401422C319EFC00972DEF /* MonthlyChartStarleet.swift */; };
 		BF6DF7642C314F57009A16E8 /* SearchBarStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6DF7632C314F57009A16E8 /* SearchBarStarleet.swift */; };
+		BF786C352C3718F800399C6D /* CalendarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF786C342C3718F800399C6D /* CalendarButton.swift */; };
+		BF786C372C37208C00399C6D /* NewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF786C362C37208C00399C6D /* NewMessage.swift */; };
 		BF89B8582C35C05B0010A5CE /* PieChartStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89B8572C35C05B0010A5CE /* PieChartStarleet.swift */; };
 		BF89B85C2C35DFD70010A5CE /* LoginStarleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89B85B2C35DFD70010A5CE /* LoginStarleet.swift */; };
 		BF89B85E2C35E0630010A5CE /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89B85D2C35E0630010A5CE /* HackerTextView.swift */; };
 		BF9FD10C2C32A38D00A64DFC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FD10B2C32A38D00A64DFC /* Date+Extension.swift */; };
+		BFB3DA5A2C37CC5F003A4C0C /* NewTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA592C37CC5F003A4C0C /* NewTraining.swift */; };
+		BFB3DA5C2C37D413003A4C0C /* PlotValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3DA5B2C37D413003A4C0C /* PlotValues.swift */; };
 		BFDC53802C2EEED6005B0FD2 /* starweb1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC537F2C2EEED6005B0FD2 /* starweb1App.swift */; };
 		BFDC53822C2EEED6005B0FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC53812C2EEED6005B0FD2 /* ContentView.swift */; };
 		BFDC53842C2EEED9005B0FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDC53832C2EEED9005B0FD2 /* Assets.xcassets */; };
@@ -64,10 +68,14 @@
 		BF4401402C319BE300972DEF /* WeeklyChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartStarleet.swift; sourceTree = "<group>"; };
 		BF4401422C319EFC00972DEF /* MonthlyChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartStarleet.swift; sourceTree = "<group>"; };
 		BF6DF7632C314F57009A16E8 /* SearchBarStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarStarleet.swift; sourceTree = "<group>"; };
+		BF786C342C3718F800399C6D /* CalendarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarButton.swift; sourceTree = "<group>"; };
+		BF786C362C37208C00399C6D /* NewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessage.swift; sourceTree = "<group>"; };
 		BF89B8572C35C05B0010A5CE /* PieChartStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartStarleet.swift; sourceTree = "<group>"; };
 		BF89B85B2C35DFD70010A5CE /* LoginStarleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStarleet.swift; sourceTree = "<group>"; };
 		BF89B85D2C35E0630010A5CE /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		BF9FD10B2C32A38D00A64DFC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		BFB3DA592C37CC5F003A4C0C /* NewTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTraining.swift; sourceTree = "<group>"; };
+		BFB3DA5B2C37D413003A4C0C /* PlotValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotValues.swift; sourceTree = "<group>"; };
 		BFDC537C2C2EEED6005B0FD2 /* starweb1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starweb1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDC537F2C2EEED6005B0FD2 /* starweb1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starweb1App.swift; sourceTree = "<group>"; };
 		BFDC53812C2EEED6005B0FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,6 +226,10 @@
 				BF35B1602C34741700DEF284 /* ProfileStarleet.swift */,
 				BF1D7F992C354A7300784B4F /* SubscriptionStarleet.swift */,
 				BF89B85D2C35E0630010A5CE /* HackerTextView.swift */,
+				BF786C342C3718F800399C6D /* CalendarButton.swift */,
+				BFB3DA592C37CC5F003A4C0C /* NewTraining.swift */,
+				BF786C362C37208C00399C6D /* NewMessage.swift */,
+				BFB3DA5B2C37D413003A4C0C /* PlotValues.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -373,6 +385,7 @@
 				BF35B1612C34741700DEF284 /* ProfileStarleet.swift in Sources */,
 				BFE8E8912C30807700E9A7DC /* NavigationStackStarleet.swift in Sources */,
 				BF89B8582C35C05B0010A5CE /* PieChartStarleet.swift in Sources */,
+				BF786C352C3718F800399C6D /* CalendarButton.swift in Sources */,
 				BFE8E8952C308A0C00E9A7DC /* HomeStarleet.swift in Sources */,
 				BF4401432C319EFC00972DEF /* MonthlyChartStarleet.swift in Sources */,
 				BFDC53822C2EEED6005B0FD2 /* ContentView.swift in Sources */,
@@ -380,8 +393,11 @@
 				BFDC53802C2EEED6005B0FD2 /* starweb1App.swift in Sources */,
 				BFDC53B12C2EF376005B0FD2 /* Constants.swift in Sources */,
 				BF4401412C319BE300972DEF /* WeeklyChartStarleet.swift in Sources */,
+				BF786C372C37208C00399C6D /* NewMessage.swift in Sources */,
 				BFDC53B52C2F37EA005B0FD2 /* Product.swift in Sources */,
 				BFE8E8992C308BB900E9A7DC /* LactateStarleet.swift in Sources */,
+				BFB3DA5C2C37D413003A4C0C /* PlotValues.swift in Sources */,
+				BFB3DA5A2C37CC5F003A4C0C /* NewTraining.swift in Sources */,
 				BFDC53B72C2F3827005B0FD2 /* User.swift in Sources */,
 				BF6DF7642C314F57009A16E8 /* SearchBarStarleet.swift in Sources */,
 				BF9FD10C2C32A38D00A64DFC /* Date+Extension.swift in Sources */,
